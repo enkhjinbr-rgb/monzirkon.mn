@@ -21,7 +21,7 @@
   --header-border: #3c3c42;
 
   /* per-project card accents (landing grid) */
-  --c-bluesky: #7fb3d9;
+  --c-bluesky: #94cee3;
   --c-hovn: #e9754f;
   --c-targad: #5fb8b0;
   --c-residence: #b08d57;
@@ -32,15 +32,20 @@
 
 /* ---- project palettes ---------------------------------------- */
 
+/* Blue Sky Cashmere — per bsc.mn brand: white ground, crest-logo navy
+   #1B427B, sky blue #94CEE3 as secondary accent */
 body[data-theme="bluesky"] {
-  --bg: #0e2a47;
-  --surface: #123152;
-  --text: #dededa;
-  --muted: #9fb0bf;
-  --hairline: #46617c;
-  --border: #274763;
-  --accent: #7fb3d9;
-  --accent-strong: #7fb3d9;
+  --bg: #fbfbfa;
+  --surface: #f2f5f9;
+  --text: #23303f;
+  --muted: #5c6b7c;
+  --hairline: #a8bacf;
+  --border: #dde5ee;
+  --accent: #94cee3;
+  --accent-strong: #1b427b;
+  --header-bg: #fbfbfa;
+  --header-text: #23303f;
+  --header-border: #dde5ee;
 }
 
 /* HOVN — canonical brand palette per Hovn_LogoGuide/Brand Canon v1.0:
@@ -500,6 +505,11 @@ body:not([data-theme]) .site-header .lang-toggle button.is-active {
   display: block;
   width: auto;
   height: clamp(3.75rem, 9vw, 6rem);
+}
+
+/* crest-shaped logos (taller than wordmarks) get more height */
+.brand-h1 img.logo-tall {
+  height: clamp(5rem, 11vw, 7.5rem);
 }
 
 .back-link {

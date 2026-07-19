@@ -22,7 +22,7 @@
 
   /* per-project card accents (landing grid) */
   --c-bluesky: #7fb3d9;
-  --c-hovn: #c8a882;
+  --c-hovn: #e9754f;
   --c-targad: #5fb8b0;
   --c-residence: #b08d57;
 
@@ -43,18 +43,20 @@ body[data-theme="bluesky"] {
   --accent-strong: #7fb3d9;
 }
 
+/* HOVN — canonical brand palette per Hovn_LogoGuide/Brand Canon v1.0:
+   Deep Brown #422F22 · Cream #F7E1C9 · Apricot #E9754F (accent only) */
 body[data-theme="hovn"] {
-  --bg: #f2ede4;
-  --surface: #ece5d8;
-  --text: #26241f;
-  --muted: #6b665c;
-  --hairline: #b9ae99;
-  --border: #dcd3c2;
-  --accent: #c8a882;
-  --accent-strong: #7d6039;
-  --header-bg: #f2ede4;
-  --header-text: #26241f;
-  --header-border: #dcd3c2;
+  --bg: #f7e1c9;
+  --surface: #f1d6b4;
+  --text: #422f22;
+  --muted: #6a5a49;
+  --hairline: #c9a87d;
+  --border: #e3c9a2;
+  --accent: #e9754f;
+  --accent-strong: #9c4123;
+  --header-bg: #f7e1c9;
+  --header-text: #422f22;
+  --header-border: #e3c9a2;
 }
 
 body[data-theme="targad"] {

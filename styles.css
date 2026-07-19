@@ -489,6 +489,17 @@ body:not([data-theme]) .site-header .lang-toggle button.is-active {
   color: var(--muted);
 }
 
+/* brand logo standing in for the page h1 (e.g. HOVN) */
+.brand-h1 {
+  line-height: 0;
+}
+
+.brand-h1 img {
+  display: block;
+  width: auto;
+  height: clamp(3.75rem, 9vw, 6rem);
+}
+
 .back-link {
   display: inline-block;
   margin-bottom: 2.5rem;

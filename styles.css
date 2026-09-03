@@ -77,14 +77,22 @@ body[data-theme="targad"] {
 }
 
 body[data-theme="residence"] {
-  --bg: #2b2926;
-  --surface: #33302c;
-  --text: #dededa;
-  --muted: #a39c90;
-  --hairline: #6b655c;
-  --border: #46423c;
+  /* «Цэнгэл» хотхон landing: warm-cream editorial body, bronze accent
+     carried over from the portfolio card (--c-residence). The hero is
+     a full-bleed drawing under a dark scrim; header chrome stays
+     investment black (see the residence component rules at the end
+     of this file). */
+  --bg: #faf8f4;
+  --surface: #f2eee6;
+  --text: #292522;
+  --muted: #787064;
+  --hairline: #b9ad9a;
+  --border: #e5ddcd;
   --accent: #b08d57;
-  --accent-strong: #b08d57;
+  --accent-strong: #8a6a3b;
+  --header-bg: #131316;
+  --header-text: #dededa;
+  --header-border: #3c3c42;
 }
 
 /* ---- reset / base --------------------------------------------- */
@@ -972,4 +980,274 @@ html.js .reveal.is-visible {
   .window-card:focus-visible {
     transform: none;
   }
+}
+
+/* ================================================================
+   Residence — «Цэнгэл» хотхон page components
+   Scope: body[data-theme="residence"] only.
+   ================================================================ */
+
+/* header details that would otherwise read the light-body tokens
+   (--muted / --accent-strong) go murky on the dark chrome — pin them */
+body[data-theme="residence"] .site-header .wordmark span,
+body[data-theme="residence"] .site-header .lang-toggle .lang-sep {
+  color: #9a9a96;
+}
+
+body[data-theme="residence"] .site-header .lang-toggle button.is-active {
+  color: #b08d57;
+  border-bottom-color: #b08d57;
+}
+
+/* ---- hero: full-bleed drawing under a dark scrim ----------------- */
+
+body[data-theme="residence"] .cine-hero {
+  position: relative;
+  isolation: isolate;
+  min-height: 85vh;
+  min-height: 85svh;
+  display: flex;
+  align-items: flex-end;
+}
+
+body[data-theme="residence"] .cine-hero-img {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* dark scrim: keeps the white-ground drawing cinematic and the
+   overlaid type + transparent header legible; bottom lands on the
+   site's investment black before handing over to the cream body */
+body[data-theme="residence"] .cine-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 12, 10, 0.82) 0%,
+    rgba(10, 12, 10, 0.46) 30%,
+    rgba(10, 12, 10, 0.4) 55%,
+    rgba(19, 19, 22, 0.97) 100%
+  );
+}
+
+body[data-theme="residence"] .cine-hero-content {
+  width: 100%;
+  padding-top: calc(var(--header-h) + 3rem);
+  padding-bottom: clamp(3.5rem, 9vh, 6rem);
+}
+
+body[data-theme="residence"] .cine-hero .back-link {
+  color: #b9b4a6;
+}
+
+body[data-theme="residence"] .cine-hero .label {
+  color: #b9b4a6;
+}
+
+body[data-theme="residence"] .cine-eyebrow {
+  margin: 2rem 0 1.25rem;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: #c49d64;
+}
+
+body[data-theme="residence"] .cine-hero h1 {
+  font-size: clamp(1.75rem, 6vw, 3.75rem);
+  letter-spacing: 0.18em;
+  color: #f2efe7;
+}
+
+body[data-theme="residence"] .cine-tagline {
+  margin-top: 1.75rem;
+  font-size: clamp(0.8125rem, 1.6vw, 1rem);
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #ddd8ca;
+}
+
+body[data-theme="residence"] .cine-hero .lead {
+  max-width: 36rem;
+  margin-top: 1.25rem;
+  color: #c3beb0;
+}
+
+/* ---- archival plates --------------------------------------------- */
+/* fixed light-mat colors so plates render identically on both grounds */
+
+body[data-theme="residence"] .plate {
+  margin: 0;
+  background: #fdfcfa;
+  border: 1px solid #e5ddcd;
+  padding: clamp(0.625rem, 1.6vw, 1rem);
+  box-shadow: 0 24px 48px -32px rgba(41, 37, 34, 0.4);
+}
+
+body[data-theme="residence"] .plate img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #b9ad9a;
+}
+
+body[data-theme="residence"] .plate-cap {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #78706a;
+}
+
+body[data-theme="residence"] .plate-cap::before {
+  content: "";
+  flex: 0 0 1.25rem;
+  height: 1px;
+  background: #b08d57;
+}
+
+/* technical drawings sit on a faint drafting-grid mat */
+body[data-theme="residence"] .plate--diagram {
+  background-image:
+    repeating-linear-gradient(0deg, rgba(176, 141, 87, 0.07) 0 1px, transparent 1px 12px),
+    repeating-linear-gradient(90deg, rgba(176, 141, 87, 0.07) 0 1px, transparent 1px 12px);
+}
+
+/* ---- stats band under the hero ------------------------------------ */
+
+body[data-theme="residence"] .stats-band {
+  padding-block: clamp(2.75rem, 7vh, 4.5rem);
+}
+
+/* ---- editorial layout helpers ------------------------------------- */
+
+body[data-theme="residence"] .grid-2 {
+  align-items: start;
+}
+
+/* terracing figures presented as an annotated diagram row;
+   column ratios chosen so both drawings land at equal height */
+body[data-theme="residence"] .diagram-row {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: clamp(2.5rem, 6vh, 4rem);
+}
+
+@media (min-width: 768px) {
+  body[data-theme="residence"] .diagram-row {
+    grid-template-columns: 58fr 42fr;
+    align-items: end;
+  }
+}
+
+body[data-theme="residence"] .amenity-row {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: clamp(2.5rem, 6vh, 4rem);
+}
+
+@media (min-width: 768px) {
+  body[data-theme="residence"] .amenity-row {
+    grid-template-columns: 54fr 46fr;
+    align-items: end;
+  }
+}
+
+/* ---- floors (03) --------------------------------------------------- */
+
+body[data-theme="residence"] .floors {
+  display: grid;
+  gap: clamp(2.5rem, 6vw, 4rem);
+}
+
+@media (min-width: 768px) {
+  body[data-theme="residence"] .floors {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+body[data-theme="residence"] .floor h3 {
+  color: var(--accent-strong);
+  margin-bottom: 1.25rem;
+}
+
+body[data-theme="residence"] .floor .plate {
+  margin-bottom: 1.5rem;
+}
+
+body[data-theme="residence"] .room-list {
+  list-style: none;
+  border-top: 1px solid var(--border);
+}
+
+body[data-theme="residence"] .room-list li {
+  padding: 0.875rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9375rem;
+}
+
+body[data-theme="residence"] .home-note {
+  max-width: 44rem;
+  margin-top: clamp(2.5rem, 6vh, 3.5rem);
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--accent);
+}
+
+/* ---- numbered fact rows (04, 05) ------------------------------------ */
+
+body[data-theme="residence"] .fact-list {
+  list-style: none;
+  border-top: 1px solid var(--border);
+  counter-reset: fact;
+}
+
+body[data-theme="residence"] .fact-list li {
+  display: grid;
+  grid-template-columns: 2.5rem 1fr;
+  gap: 1rem;
+  padding: 1.125rem 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.9375rem;
+}
+
+body[data-theme="residence"] .fact-list li::before {
+  counter-increment: fact;
+  content: counter(fact, decimal-leading-zero);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--accent-strong);
+  padding-top: 0.3em;
+}
+
+/* ---- credit + CTA ---------------------------------------------------- */
+
+body[data-theme="residence"] .credit-band {
+  padding-block: clamp(3rem, 7vh, 4.5rem);
+}
+
+body[data-theme="residence"] .credit-text {
+  max-width: 44rem;
+  margin-top: 1.25rem;
+}
+
+body[data-theme="residence"] .credit-status {
+  margin-top: 0.75rem;
+  font-size: 0.8125rem;
+}
+
+body[data-theme="residence"] .cta-tag {
+  color: var(--accent-strong);
+  margin-bottom: 1.25rem;
 }

@@ -605,6 +605,7 @@ body:not([data-theme]) .site-header .lang-toggle button.is-active {
 .card-name {
   font-size: clamp(1.0625rem, 2vw, 1.375rem);
   letter-spacing: 0.2em;
+  color: var(--card-accent);
   transition: color 250ms ease;
 }
 
@@ -625,8 +626,6 @@ body:not([data-theme]) .site-header .lang-toggle button.is-active {
   transition: color 250ms ease;
 }
 
-.window-card:hover .card-name,
-.window-card:focus-visible .card-name,
 .window-card:hover .card-open,
 .window-card:focus-visible .card-open {
   color: var(--card-accent);

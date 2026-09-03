@@ -10,11 +10,11 @@
   var COMMON_I18N = {
     "a11y.skip": { mn: "Агуулга руу очих", en: "Skip to content" },
     "nav.about": { mn: "Танилцуулга", en: "About" },
-    "nav.portfolio": { mn: "Багц", en: "Portfolio" },
+    "nav.portfolio": { mn: "Хөрөнгө оруулалтууд", en: "Portfolio" },
     "nav.contact": { mn: "Холбоо барих", en: "Contact" },
     "brand.descriptor": { mn: "Хөрөнгө оруулалтын компани", en: "Investment company" },
     "common.open": { mn: "Нээх →", en: "Open →" },
-    "common.back": { mn: "← Багц руу буцах", en: "← Back to portfolio" },
+    "common.back": { mn: "← Хөрөнгө оруулалтууд руу буцах", en: "← Back to portfolio" },
     "contact.label": { mn: "Холбоо барих", en: "Contact" },
     "contact.address.label": { mn: "Хаяг", en: "Address" },
     "contact.address": {

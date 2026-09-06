@@ -1,4 +1,4 @@
-/* MONZIRKON — shared behavior: i18n toggle, sticky header, scroll reveal.
+/* MONTSIRKON — shared behavior: i18n toggle, sticky header, scroll reveal.
    Page-specific strings are provided by each page as window.PAGE_I18N;
    strings shared by every page (header, footer, contact) live here. */
 
@@ -28,8 +28,8 @@
       en: "Sor Building, Chinggis Avenue, 2nd Khoroo,<br>Khan-Uul District, Ulaanbaatar 17040, Mongolia"
     },
     "footer.rights": {
-      mn: "© 2026 Монзиркон ХХК. Бүх эрх хамгаалагдсан.",
-      en: "© 2026 Monzirkon LLC. All rights reserved."
+      mn: "© 2026 Монциркон ХХК. Бүх эрх хамгаалагдсан.",
+      en: "© 2026 Montsirkon LLC. All rights reserved."
     }
   };
 

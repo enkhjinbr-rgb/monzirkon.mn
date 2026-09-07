@@ -1250,3 +1250,87 @@ body[data-theme="residence"] .cta-tag {
   color: var(--accent-strong);
   margin-bottom: 1.25rem;
 }
+
+/* ---- mobile navigation (disclosure menu under the header, <768px) ---- */
+
+.nav-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  margin-right: -0.75rem;
+  position: relative;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  color: var(--header-text);
+}
+
+.nav-toggle::before,
+.nav-toggle::after {
+  content: "";
+  position: absolute;
+  left: 0.875rem;
+  right: 0.875rem;
+  height: 1px;
+  background: currentColor;
+  transition: transform 250ms ease, top 250ms ease;
+}
+
+.nav-toggle::before { top: calc(50% - 4px); }
+.nav-toggle::after { top: calc(50% + 4px); }
+
+.nav-toggle[aria-expanded="true"]::before { top: 50%; transform: rotate(45deg); }
+.nav-toggle[aria-expanded="true"]::after { top: 50%; transform: rotate(-45deg); }
+
+@media (min-width: 768px) {
+  .nav-toggle { display: none; }
+}
+
+@media (max-width: 767.98px) {
+  .header-inner .lang-toggle { margin-left: auto; }
+
+  .site-header.nav-open {
+    background: var(--header-bg);
+    border-bottom-color: var(--header-border);
+  }
+
+  .site-header.nav-open .site-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    position: absolute;
+    top: var(--header-h);
+    left: 0;
+    right: 0;
+    padding: 0.25rem clamp(1.25rem, 5vw, 3rem) 1.25rem;
+    background: var(--header-bg);
+    border-bottom: 1px solid var(--header-border);
+  }
+
+  .site-header.nav-open .site-nav a {
+    display: block;
+    padding: 0.9375rem 0;
+    border-top: 1px solid var(--header-border);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-toggle::before,
+  .nav-toggle::after { transition: none; }
+}
+
+/* residence: gallery grid for the future photoreal renders (see the RENDERS slot in residence.html) */
+body[data-theme="residence"] .gallery {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  body[data-theme="residence"] .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

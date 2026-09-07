@@ -1,0 +1,21 @@
+{
+  "name": "Монциркон ХХК",
+  "short_name": "Montsirkon",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#131316",
+  "theme_color": "#131316",
+  "lang": "mn",
+  "icons": [
+    {
+      "src": "assets/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

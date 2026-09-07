@@ -13,10 +13,35 @@
   <meta property="og:url" content="https://www.monzirkon.mn/hovn.html">
   <meta property="og:locale" content="mn_MN">
   <meta property="og:locale:alternate" content="en_US">
-  <!-- og:image: add /og.png (1200x630) before launch -->
+  <meta property="og:image" content="https://www.monzirkon.mn/assets/og/og-hovn.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="theme-color" content="#f7e1c9">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23131316'/%3E%3Ctext x='32' y='43' font-family='Helvetica,Arial,sans-serif' font-size='30' font-weight='500' fill='%23DEDEDA' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
   <script>document.documentElement.classList.add("js");</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Нүүр",
+      "item": "https://www.monzirkon.mn/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "HOVN",
+      "item": "https://www.monzirkon.mn/hovn.html"
+    }
+  ]
+}
+  </script>
 </head>
 <body data-theme="hovn">
   <a class="skip-link" href="#main" data-i18n="a11y.skip">Агуулга руу очих</a>
@@ -24,7 +49,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="wordmark" href="index.html" aria-label="Montsirkon — нүүр хуудас">MON<span>TSIRKON</span></a>
-      <nav class="site-nav" aria-label="Үндсэн цэс">
+      <nav class="site-nav" id="site-nav" aria-label="Үндсэн цэс">
         <a href="index.html#about" data-i18n="nav.about">Танилцуулга</a>
         <a href="index.html#portfolio" data-i18n="nav.portfolio">Хөрөнгө оруулалтууд</a>
         <a href="index.html#contact" data-i18n="nav.contact">Холбоо барих</a>
@@ -34,6 +59,7 @@
         <span class="lang-sep" aria-hidden="true">/</span>
         <button type="button" data-lang="en" aria-pressed="false">EN</button>
       </div>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Цэс"></button>
     </div>
   </header>
 
@@ -190,83 +216,83 @@
   <script>
     window.PAGE_I18N = {
       "meta.title": {
-        mn: "HOVN — Хүүхэд, ээжид зориулсан Монгол брэнд",
-        en: "HOVN — A Mongolian Brand for Children & Moms"
+        "mn": "HOVN — Хүүхэд, ээжид зориулсан Монгол брэнд",
+        "en": "HOVN — A Mongolian Brand for Children & Moms"
       },
       "meta.desc": {
-        mn: "HOVN — Хөвөн зөөлөн. Хүүхдэд, мөн ээжид нь зориулсан Монголд үйлдвэрлэсэн хувцасны брэнд. Ноолуур, хөвөн, ноос, торго, меринос — өөрийн бүрэн мөчлөгт үйлдвэрт.",
-        en: "HOVN — Floats on Clouds. A Mongolian-made clothing brand for children and their moms. Cashmere, cotton, wool, silk and merino, from our own full-cycle factory."
+        "mn": "HOVN — Хөвөн зөөлөн. Хүүхдэд, мөн ээжид нь зориулсан Монголд үйлдвэрлэсэн хувцасны брэнд. Ноолуур, хөвөн, ноос, торго, меринос — өөрийн бүрэн мөчлөгт үйлдвэрт.",
+        "en": "HOVN — Floats on Clouds. A Mongolian-made clothing brand for children and their moms. Cashmere, cotton, wool, silk and merino, from our own full-cycle factory."
       },
       "page.label": {
-        mn: "Монциркон — 02 · Хэрэглээний брэнд",
-        en: "Montsirkon portfolio — 02 · Consumer brand"
+        "mn": "Монциркон — 02 · Хэрэглээний брэнд",
+        "en": "Montsirkon portfolio — 02 · Consumer brand"
       },
-      "page.motto": { mn: "Хөвөн зөөлөн", en: "Floats on Clouds" },
+      "page.motto": { "mn": "Хөвөн зөөлөн", "en": "Floats on Clouds" },
       "page.lead": {
-        mn: "Бид хүүхдийг амьдралынхаа эхний өдрөөс хувцасладаг. Мөн заримдаа — тэднийг дэлхийд авчирсан ээжийг.",
-        en: "We dress children from their very first day. And once in a while — the mother who brought them here."
+        "mn": "Бид хүүхдийг амьдралынхаа эхний өдрөөс хувцасладаг. Мөн заримдаа — тэднийг дэлхийд авчирсан ээжийг.",
+        "en": "We dress children from their very first day. And once in a while — the mother who brought them here."
       },
-      "story.label": { mn: "01 — Брэндийн түүх", en: "01 — Brand story" },
-      "story.title": { mn: "Утгаас илүү — мэдрэмж", en: "More than meaning — a feeling" },
+      "story.label": { "mn": "01 — Брэндийн түүх", "en": "01 — Brand story" },
+      "story.title": { "mn": "Утгаас илүү — мэдрэмж", "en": "More than meaning — a feeling" },
       "story.p1": {
-        mn: "Монгол хэлэнд «хөвөн» гэдэг нэр санаатай давхар утгатай: хөвөн — хамгийн зөөлөн материал, хөвөх — хөнгөн, жингүй байдал. Салхинд нисч яваа хүүхдийн инээдийн дуу шиг. Тэр нь HOVN.",
-        en: "In Mongolian, hövön carries a deliberate double meaning: cotton — the softest of materials — and to float, light and weightless. Like a child's laughter carried on the wind. That is HOVN."
+        "mn": "Монгол хэлэнд «хөвөн» гэдэг нэр санаатай давхар утгатай: хөвөн — хамгийн зөөлөн материал, хөвөх — хөнгөн, жингүй байдал. Салхинд нисч яваа хүүхдийн инээдийн дуу шиг. Тэр нь HOVN.",
+        "en": "In Mongolian, hövön carries a deliberate double meaning: cotton — the softest of materials — and to float, light and weightless. Like a child's laughter carried on the wind. That is HOVN."
       },
       "story.p2": {
-        mn: "Бид эцэг эхийн нэг л хүслээс төрсөн: хүүхэд бүр хоёр дахь арьс мэт мэдрэгдэх хувцастай байх ёстой. Хамгийн эмзэг өглөөнд хангалттай зөөлөн, ертөнцийг нээх өдөр бүрд хангалттай бат бөх.",
-        en: "We were born from a parent's wish — that every child deserves clothing that feels like a second skin. Soft enough for the most delicate mornings, strong enough for every world-discovering day."
+        "mn": "Бид эцэг эхийн нэг л хүслээс төрсөн: хүүхэд бүр хоёр дахь арьс мэт мэдрэгдэх хувцастай байх ёстой. Хамгийн эмзэг өглөөнд хангалттай зөөлөн, ертөнцийг нээх өдөр бүрд хангалттай бат бөх.",
+        "en": "We were born from a parent's wish — that every child deserves clothing that feels like a second skin. Soft enough for the most delicate mornings, strong enough for every world-discovering day."
       },
       "story.p3": {
-        mn: "HOVN өөрийн бүрэн мөчлөгт үйлдвэр дээр суурилдаг. Тиймээс улирал бүр, хэрэгцээ бүрд тохирох материалаа бид өөрсдөө сонгодог — Blue Sky Cashmere-ийн ноолуур, амьсгал нэвтрүүлдэг цэвэр хөвөн, ноос, торго, меринос. Бид чанарыг өөр хэнд ч хариуцуулдаггүй — өөрсдөө бүтээдэг.",
-        en: "HOVN is built on its own full-cycle factory. So we choose the fibre each season and each need calls for — cashmere through Blue Sky Cashmere, breathable pure cotton, wool, silk, merino. We don't send quality somewhere else to be managed; we make it ourselves."
+        "mn": "HOVN өөрийн бүрэн мөчлөгт үйлдвэр дээр суурилдаг. Тиймээс улирал бүр, хэрэгцээ бүрд тохирох материалаа бид өөрсдөө сонгодог — Blue Sky Cashmere-ийн ноолуур, амьсгал нэвтрүүлдэг цэвэр хөвөн, ноос, торго, меринос. Бид чанарыг өөр хэнд ч хариуцуулдаггүй — өөрсдөө бүтээдэг.",
+        "en": "HOVN is built on its own full-cycle factory. So we choose the fibre each season and each need calls for — cashmere through Blue Sky Cashmere, breathable pure cotton, wool, silk, merino. We don't send quality somewhere else to be managed; we make it ourselves."
       },
       "story.p4": {
-        mn: "Энэ бол Монголын шошго зүүсэн масс үйлдвэрлэл биш. Энэ бол «Монголд үйлдвэрлэсэн» гэдгийг халамжийн стандарт болгосон хэрэг.",
-        en: "This is not mass production wearing a Mongolian label. This is Made in Mongolia as a standard of care."
+        "mn": "Энэ бол Монголын шошго зүүсэн масс үйлдвэрлэл биш. Энэ бол «Монголд үйлдвэрлэсэн» гэдгийг халамжийн стандарт болгосон хэрэг.",
+        "en": "This is not mass production wearing a Mongolian label. This is Made in Mongolia as a standard of care."
       },
-      "story.meta1.label": { mn: "Ангилал", en: "Category" },
-      "story.meta1.value": { mn: "Хүүхэд, ээжийн хувцас", en: "Children's & mother's clothing" },
-      "story.meta2.label": { mn: "Материал", en: "Materials" },
-      "story.meta2.value": { mn: "Ноолуур · хөвөн · ноос · торго · меринос", en: "Cashmere · cotton · wool · silk · merino" },
-      "story.meta3.label": { mn: "Харьяалал", en: "Part of" },
-      "story.meta3.value": { mn: "Монциркон ХХК", en: "Montsirkon LLC" },
-      "collection.label": { mn: "02 — Цуглуулга", en: "02 — Collection" },
-      "collection.title": { mn: "Үндсэн цуглуулга", en: "The core collection" },
-      "item1.name": { mn: "Нярайн бойтог", en: "Baby booties" },
-      "item1.note": { mn: "Мерино ба ноолууран хольц — анхны цуврал", en: "Merino &amp; cashmere blend — the first run" },
-      "item2.name": { mn: "Ээжийн хантааз", en: "Mother's undervest" },
-      "item2.note": { mn: "Ээжийн цуврал", en: "The mother's line" },
-      "item3.name": { mn: "Цамц", en: "Sweater" },
-      "item3.note": { mn: "Өдөр бүрийн зөөлөн дулаан", en: "Soft warmth for every day" },
-      "item4.name": { mn: "Кардиган", en: "Cardigan" },
-      "item4.note": { mn: "Давхарлаж өмсөхөд эвтэйхэн", en: "Made for easy layering" },
-      "item5.name": { mn: "Малгай ба ороолт", en: "Hat &amp; scarf" },
-      "item5.note": { mn: "Өвлийн иж бүрдэл", en: "A matched winter set" },
-      "item6.name": { mn: "«Мини + Мама» хослол", en: "Mini + Mama set" },
-      "item6.note": { mn: "Ээж, үрийн ижил загвар", en: "One look for mother and child" },
-      "buy.label": { mn: "03 — Худалдан авах", en: "03 — Where to buy" },
-      "buy.title": { mn: "Худалдааны цэг, сувгууд", en: "Points of sale" },
-      "buy.f1.name": { mn: "Флагман дэлгүүр", en: "Flagship store" },
+      "story.meta1.label": { "mn": "Ангилал", "en": "Category" },
+      "story.meta1.value": { "mn": "Хүүхэд, ээжийн хувцас", "en": "Children's & mother's clothing" },
+      "story.meta2.label": { "mn": "Материал", "en": "Materials" },
+      "story.meta2.value": { "mn": "Ноолуур · хөвөн · ноос · торго · меринос", "en": "Cashmere · cotton · wool · silk · merino" },
+      "story.meta3.label": { "mn": "Харьяалал", "en": "Part of" },
+      "story.meta3.value": { "mn": "Монциркон ХХК", "en": "Montsirkon LLC" },
+      "collection.label": { "mn": "02 — Цуглуулга", "en": "02 — Collection" },
+      "collection.title": { "mn": "Үндсэн цуглуулга", "en": "The core collection" },
+      "item1.name": { "mn": "Нярайн бойтог", "en": "Baby booties" },
+      "item1.note": { "mn": "Мерино ба ноолууран хольц — анхны цуврал", "en": "Merino &amp; cashmere blend — the first run" },
+      "item2.name": { "mn": "Ээжийн хантааз", "en": "Mother's undervest" },
+      "item2.note": { "mn": "Ээжийн цуврал", "en": "The mother's line" },
+      "item3.name": { "mn": "Цамц", "en": "Sweater" },
+      "item3.note": { "mn": "Өдөр бүрийн зөөлөн дулаан", "en": "Soft warmth for every day" },
+      "item4.name": { "mn": "Кардиган", "en": "Cardigan" },
+      "item4.note": { "mn": "Давхарлаж өмсөхөд эвтэйхэн", "en": "Made for easy layering" },
+      "item5.name": { "mn": "Малгай ба ороолт", "en": "Hat &amp; scarf" },
+      "item5.note": { "mn": "Өвлийн иж бүрдэл", "en": "A matched winter set" },
+      "item6.name": { "mn": "«Мини + Мама» хослол", "en": "Mini + Mama set" },
+      "item6.note": { "mn": "Ээж, үрийн ижил загвар", "en": "One look for mother and child" },
+      "buy.label": { "mn": "03 — Худалдан авах", "en": "03 — Where to buy" },
+      "buy.title": { "mn": "Худалдааны цэг, сувгууд", "en": "Points of sale" },
+      "buy.f1.name": { "mn": "Флагман дэлгүүр", "en": "Flagship store" },
       "buy.f1.desc": {
-        mn: "Улаанбаатар хот · •• — байршлын дэлгэрэнгүй мэдээллийг удахгүй нийтэлнэ.",
-        en: "Ulaanbaatar · •• — location details to be announced."
+        "mn": "Улаанбаатар хот · •• — байршлын дэлгэрэнгүй мэдээллийг удахгүй нийтэлнэ.",
+        "en": "Ulaanbaatar · •• — location details to be announced."
       },
-      "buy.f2.name": { mn: "Онлайн ба сошиал суваг", en: "Online &amp; social" },
+      "buy.f2.name": { "mn": "Онлайн ба сошиал суваг", "en": "Online &amp; social" },
       "buy.f2.desc": {
-        mn: "Захиалгыг онлайн болон сошиал сувгаар хүлээн авна. ••",
-        en: "Orders are taken through our online and social channels. ••"
+        "mn": "Захиалгыг онлайн болон сошиал сувгаар хүлээн авна. ••",
+        "en": "Orders are taken through our online and social channels. ••"
       },
-      "buy.f3.name": { mn: "Бөөний худалдаа", en: "Wholesale" },
+      "buy.f3.name": { "mn": "Бөөний худалдаа", "en": "Wholesale" },
       "buy.f3.desc": {
-        mn: "Бөөний худалдааны саналаа и-мэйлээр илгээнэ үү.",
-        en: "For wholesale enquiries, please write to us by email."
+        "mn": "Бөөний худалдааны саналаа и-мэйлээр илгээнэ үү.",
+        "en": "For wholesale enquiries, please write to us by email."
       },
-      "cta.title": { mn: "Шинэ цуглуулгын мэдээ", en: "News of the next collection" },
+      "cta.title": { "mn": "Шинэ цуглуулгын мэдээ", "en": "News of the next collection" },
       "cta.p": {
-        mn: "Шинэ цуглуулгын мэдээ авах, хамтран ажиллах саналаа бидэнд илгээнэ үү.",
-        en: "Write to us for collection news and partnership enquiries."
+        "mn": "Шинэ цуглуулгын мэдээ авах, хамтран ажиллах саналаа бидэнд илгээнэ үү.",
+        "en": "Write to us for collection news and partnership enquiries."
       },
-      "cta.btn": { mn: "Холбогдох", en: "Get in touch" }
+      "cta.btn": { "mn": "Холбогдох", "en": "Get in touch" }
     };
   </script>
   <script src="app.js" defer></script>

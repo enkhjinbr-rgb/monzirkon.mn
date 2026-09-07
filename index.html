@@ -13,10 +13,38 @@
   <meta property="og:url" content="https://www.monzirkon.mn/">
   <meta property="og:locale" content="mn_MN">
   <meta property="og:locale:alternate" content="en_US">
-  <!-- og:image: add /og.png (1200x630) before launch -->
+  <meta property="og:image" content="https://www.monzirkon.mn/assets/og/og-index.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="theme-color" content="#131316">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23131316'/%3E%3Ctext x='32' y='43' font-family='Helvetica,Arial,sans-serif' font-size='30' font-weight='500' fill='%23DEDEDA' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
   <script>document.documentElement.classList.add("js");</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Монциркон ХХК",
+  "alternateName": [
+    "Montsirkon",
+    "Montsirkon LLC"
+  ],
+  "url": "https://www.monzirkon.mn/",
+  "logo": "https://www.monzirkon.mn/assets/icon-512.png",
+  "email": "Hanbulag@monzirkon.mn",
+  "telephone": "+976 9939 1208",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Чингисийн өргөн чөлөө, Сор Билдинг",
+    "addressLocality": "Улаанбаатар",
+    "addressRegion": "Хан-Уул дүүрэг, 2-р хороо",
+    "postalCode": "17040",
+    "addressCountry": "MN"
+  }
+}
+  </script>
 </head>
 <body>
   <a class="skip-link" href="#main" data-i18n="a11y.skip">Агуулга руу очих</a>
@@ -24,7 +52,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="wordmark" href="index.html" aria-label="Montsirkon — нүүр хуудас">MON<span>TSIRKON</span></a>
-      <nav class="site-nav" aria-label="Үндсэн цэс">
+      <nav class="site-nav" id="site-nav" aria-label="Үндсэн цэс">
         <a href="#about" data-i18n="nav.about">Танилцуулга</a>
         <a href="#portfolio" data-i18n="nav.portfolio">Хөрөнгө оруулалтууд</a>
         <a href="#contact" data-i18n="nav.contact">Холбоо барих</a>
@@ -34,6 +62,7 @@
         <span class="lang-sep" aria-hidden="true">/</span>
         <button type="button" data-lang="en" aria-pressed="false">EN</button>
       </div>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Цэс"></button>
     </div>
   </header>
 
@@ -210,74 +239,74 @@
   <script>
     window.PAGE_I18N = {
       "meta.title": {
-        mn: "Монциркон ХХК — Хөрөнгө оруулалтын компани",
-        en: "Montsirkon LLC — Investment Company"
+        "mn": "Монциркон ХХК — Хөрөнгө оруулалтын компани",
+        "en": "Montsirkon LLC — Investment Company"
       },
       "meta.desc": {
-        mn: "Монциркон ХХК нь үйлдвэрлэл, аялал жуулчлал, үл хөдлөх хөрөнгө, хэрэглээний брэндийн салбарт хөрөнгө оруулалт хийдэг Монголын компани юм.",
-        en: "Montsirkon LLC is a diversified Mongolian investment company with holdings in manufacturing, tourism, real estate and consumer brands."
+        "mn": "Монциркон ХХК нь үйлдвэрлэл, аялал жуулчлал, үл хөдлөх хөрөнгө, хэрэглээний брэндийн салбарт хөрөнгө оруулалт хийдэг Монголын компани юм.",
+        "en": "Montsirkon LLC is a diversified Mongolian investment company with holdings in manufacturing, tourism, real estate and consumer brands."
       },
-      "a11y.skip": { mn: "Агуулга руу очих", en: "Skip to content" },
-      "hero.label": { mn: "Монгол Улс · Улаанбаатар", en: "Ulaanbaatar · Mongolia" },
+      "a11y.skip": { "mn": "Агуулга руу очих", "en": "Skip to content" },
+      "hero.label": { "mn": "Монгол Улс · Улаанбаатар", "en": "Ulaanbaatar · Mongolia" },
       "hero.tagline": {
-        mn: "Үйлдвэрлэл, аялал жуулчлал, үл хөдлөх хөрөнгө, хэрэглээний брэнд — дөрвөн салбарт урт хугацааны үнэ цэн бүтээнэ.",
-        en: "Building long-term value across manufacturing, tourism, real estate and consumer brands."
+        "mn": "Үйлдвэрлэл, аялал жуулчлал, үл хөдлөх хөрөнгө, хэрэглээний брэнд — дөрвөн салбарт урт хугацааны үнэ цэн бүтээнэ.",
+        "en": "Building long-term value across manufacturing, tourism, real estate and consumer brands."
       },
-      "hero.scroll": { mn: "Гүйлгэх", en: "Scroll" },
-      "about.label": { mn: "01 — Бидний тухай", en: "01 — About us" },
-      "about.title": { mn: "Тогтвортой өсөлт, хариуцлагатай өмчлөл", en: "Enduring growth, responsible ownership" },
+      "hero.scroll": { "mn": "Гүйлгэх", "en": "Scroll" },
+      "about.label": { "mn": "01 — Бидний тухай", "en": "01 — About us" },
+      "about.title": { "mn": "Тогтвортой өсөлт, хариуцлагатай өмчлөл", "en": "Enduring growth, responsible ownership" },
       "about.p1": {
-        mn: "Монциркон ХХК нь үйлдвэрлэл, аялал жуулчлал, үл хөдлөх хөрөнгө, хэрэглээний брэндийн салбарт хөрөнгө оруулалт хийдэг Монголын компани юм.",
-        en: "Montsirkon LLC is a diversified Mongolian investment company with holdings in manufacturing, tourism, real estate and consumer brands."
+        "mn": "Монциркон ХХК нь үйлдвэрлэл, аялал жуулчлал, үл хөдлөх хөрөнгө, хэрэглээний брэндийн салбарт хөрөнгө оруулалт хийдэг Монголын компани юм.",
+        "en": "Montsirkon LLC is a diversified Mongolian investment company with holdings in manufacturing, tourism, real estate and consumer brands."
       },
       "about.p2": {
-        mn: "Бид салбар бүртээ урт хугацааны өсөлтийг эрхэмлэж, хамтрагч түншүүдийнхээ итгэлд тулгуурлан үнэ цэнийг тэвчээртэй, тууштай бүтээдэг.",
-        en: "In every sector we favour patient, long-term growth — building value steadily on the trust of our partners."
+        "mn": "Бид салбар бүртээ урт хугацааны өсөлтийг эрхэмлэж, хамтрагч түншүүдийнхээ итгэлд тулгуурлан үнэ цэнийг тэвчээртэй, тууштай бүтээдэг.",
+        "en": "In every sector we favour patient, long-term growth — building value steadily on the trust of our partners."
       },
-      "about.pillar1": { mn: "Үйлдвэрлэл", en: "Manufacturing" },
-      "about.pillar2": { mn: "Аялал жуулчлал", en: "Tourism" },
-      "about.pillar3": { mn: "Үл хөдлөх хөрөнгө", en: "Real estate" },
-      "about.pillar4": { mn: "Хэрэглээний брэнд", en: "Consumer brands" },
-      "about.founded.label": { mn: "Байгуулагдсан", en: "Founded" },
-      "about.founded.value": { mn: "20•• он", en: "20••" },
-      "about.leadership.label": { mn: "Удирдлага", en: "Leadership" },
+      "about.pillar1": { "mn": "Үйлдвэрлэл", "en": "Manufacturing" },
+      "about.pillar2": { "mn": "Аялал жуулчлал", "en": "Tourism" },
+      "about.pillar3": { "mn": "Үл хөдлөх хөрөнгө", "en": "Real estate" },
+      "about.pillar4": { "mn": "Хэрэглээний брэнд", "en": "Consumer brands" },
+      "about.founded.label": { "mn": "Байгуулагдсан", "en": "Founded" },
+      "about.founded.value": { "mn": "20•• он", "en": "20••" },
+      "about.leadership.label": { "mn": "Удирдлага", "en": "Leadership" },
       "about.leadership.value": {
-        mn: "Гүйцэтгэх захирал — Энхжин Батдэлгэр",
-        en: "Managing Director — Enkhjin Batdelger"
+        "mn": "Гүйцэтгэх захирал — Энхжин Батдэлгэр",
+        "en": "Managing Director — Enkhjin Batdelger"
       },
-      "portfolio.label": { mn: "02 — Хөрөнгө оруулалтууд", en: "02 — Portfolio" },
-      "portfolio.title": { mn: "Дөрвөн компани. Дөрвөн ертөнц.", en: "Four companies. Four worlds." },
-      "portfolio.name1": { mn: "Блю скай кашемир", en: "Blue Sky Cashmere" },
-      "portfolio.name2": { mn: "HOVN брэнд", en: "HOVN" },
-      "portfolio.name3": { mn: "Таргад резорт", en: "Targad Resort" },
-      "portfolio.name4": { mn: "Цэнгэл хотхон", en: "Tsengel Residence" },
-      "portfolio.sector1": { mn: "Үйлдвэрлэл", en: "Manufacturing" },
-      "portfolio.sector2": { mn: "Хэрэглээний брэнд", en: "Consumer brand" },
-      "portfolio.sector3": { mn: "Аялал жуулчлал", en: "Tourism" },
-      "portfolio.sector4": { mn: "Үл хөдлөх хөрөнгө", en: "Real estate" },
+      "portfolio.label": { "mn": "02 — Хөрөнгө оруулалтууд", "en": "02 — Portfolio" },
+      "portfolio.title": { "mn": "Дөрвөн компани. Дөрвөн ертөнц.", "en": "Four companies. Four worlds." },
+      "portfolio.name1": { "mn": "Блю скай кашемир", "en": "Blue Sky Cashmere" },
+      "portfolio.name2": { "mn": "HOVN брэнд", "en": "HOVN" },
+      "portfolio.name3": { "mn": "Таргад резорт", "en": "Targad Resort" },
+      "portfolio.name4": { "mn": "Цэнгэл хотхон", "en": "Tsengel Residence" },
+      "portfolio.sector1": { "mn": "Үйлдвэрлэл", "en": "Manufacturing" },
+      "portfolio.sector2": { "mn": "Хэрэглээний брэнд", "en": "Consumer brand" },
+      "portfolio.sector3": { "mn": "Аялал жуулчлал", "en": "Tourism" },
+      "portfolio.sector4": { "mn": "Үл хөдлөх хөрөнгө", "en": "Real estate" },
       "portfolio.desc1": {
-        mn: "Дээд зэрэглэлийн монгол ноолуурын үйлдвэрлэл — 50 хувийн эзэмшил.",
-        en: "Premium Mongolian cashmere manufacturing — 50% ownership."
+        "mn": "Дээд зэрэглэлийн монгол ноолуурын үйлдвэрлэл — 50 хувийн эзэмшил.",
+        "en": "Premium Mongolian cashmere manufacturing — 50% ownership."
       },
       "portfolio.desc2": {
-        mn: "Хүүхэд, ээжид зориулсан хувцасны брэнд — хөвөн зөөлөн.",
-        en: "Clothing for children and their moms — floats on clouds."
+        "mn": "Хүүхэд, ээжид зориулсан хувцасны брэнд — хөвөн зөөлөн.",
+        "en": "Clothing for children and their moms — floats on clouds."
       },
       "portfolio.desc3": {
-        mn: "Увс аймгийн Хяргас нуурын эрэг дэх дөрвөн улирлын амралтын цогцолбор.",
-        en: "A four-season resort on Khyargas Lake, Uvs Province."
+        "mn": "Увс аймгийн Хяргас нуурын эрэг дэх дөрвөн улирлын амралтын цогцолбор.",
+        "en": "A four-season resort on Khyargas Lake, Uvs Province."
       },
       "portfolio.desc4": {
-        mn: "«Цэнгэл» хотхон — Шарга морьтын энгэрт хэрэгжиж буй таунхаус төсөл.",
-        en: "Tsengel — a townhouse complex taking shape at Sharga Morit, Ulaanbaatar."
+        "mn": "«Цэнгэл» хотхон — Шарга морьтын энгэрт хэрэгжиж буй таунхаус төсөл.",
+        "en": "Tsengel — a townhouse complex taking shape at Sharga Morit, Ulaanbaatar."
       },
-      "contactSec.label": { mn: "03 — Холбоо барих", en: "03 — Contact" },
-      "contactSec.title": { mn: "Хамтран ажиллах санал", en: "Working together" },
+      "contactSec.label": { "mn": "03 — Холбоо барих", "en": "03 — Contact" },
+      "contactSec.title": { "mn": "Хамтран ажиллах санал", "en": "Working together" },
       "contactSec.p1": {
-        mn: "Хөрөнгө оруулалт, хамтын ажиллагааны саналаа бидэнд илгээнэ үү. Бид ажлын 3 хоногийн дотор хариу өгнө.",
-        en: "For investment and partnership enquiries, write to us — we reply within three working days."
+        "mn": "Хөрөнгө оруулалт, хамтын ажиллагааны саналаа бидэнд илгээнэ үү. Бид ажлын 3 хоногийн дотор хариу өгнө.",
+        "en": "For investment and partnership enquiries, write to us — we reply within three working days."
       },
-      "contactSec.cta": { mn: "И-мэйл илгээх", en: "Send an email" }
+      "contactSec.cta": { "mn": "И-мэйл илгээх", "en": "Send an email" }
     };
   </script>
   <script src="app.js" defer></script>

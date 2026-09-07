@@ -16,9 +16,50 @@
   <meta property="og:image:height" content="630">
   <meta property="og:locale" content="mn_MN">
   <meta property="og:locale:alternate" content="en_US">
+  <meta name="theme-color" content="#131316">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23131316'/%3E%3Ctext x='32' y='43' font-family='Helvetica,Arial,sans-serif' font-size='30' font-weight='500' fill='%23DEDEDA' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
+  <link rel="preload" as="image" href="assets/tsengel/hero-facade.jpg" imagesrcset="assets/tsengel/hero-facade-800.jpg 800w, assets/tsengel/hero-facade-1400.jpg 1400w, assets/tsengel/hero-facade.jpg 2000w" imagesizes="100vw">
   <link rel="stylesheet" href="styles.css">
   <script>document.documentElement.classList.add("js");</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Нүүр",
+          "item": "https://www.monzirkon.mn/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "«Цэнгэл» хотхон",
+          "item": "https://www.monzirkon.mn/residence.html"
+        }
+      ]
+    },
+    {
+      "@type": "Place",
+      "name": "«Цэнгэл» хотхон",
+      "url": "https://www.monzirkon.mn/residence.html",
+      "image": "https://www.monzirkon.mn/assets/tsengel/og-residence.jpg",
+      "description": "Шарга морьтын аманд, ноён уулын нарлаг энгэрт байрлах 24 айлын таунхаус хотхон.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Улаанбаатар",
+        "addressRegion": "Сүхбаатар дүүрэг, 19-р хороо",
+        "addressCountry": "MN"
+      }
+    }
+  ]
+}
+  </script>
 </head>
 <body data-theme="residence">
   <a class="skip-link" href="#main" data-i18n="a11y.skip">Агуулга руу очих</a>
@@ -26,7 +67,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="wordmark" href="index.html" aria-label="Montsirkon — нүүр хуудас">MON<span>TSIRKON</span></a>
-      <nav class="site-nav" aria-label="Үндсэн цэс">
+      <nav class="site-nav" id="site-nav" aria-label="Үндсэн цэс">
         <a href="index.html#about" data-i18n="nav.about">Танилцуулга</a>
         <a href="index.html#portfolio" data-i18n="nav.portfolio">Хөрөнгө оруулалтууд</a>
         <a href="index.html#contact" data-i18n="nav.contact">Холбоо барих</a>
@@ -36,6 +77,7 @@
         <span class="lang-sep" aria-hidden="true">/</span>
         <button type="button" data-lang="en" aria-pressed="false">EN</button>
       </div>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Цэс"></button>
     </div>
   </header>
 
@@ -43,7 +85,7 @@
 
     <!-- HERO — full-bleed drawing under a dark scrim -->
     <section class="cine-hero">
-      <img class="cine-hero-img" src="assets/tsengel/hero-axo-ne.jpg" alt="«Цэнгэл» хотхоны 3D харагдах байдал — зүүн хойд зүгээс, дээрээс" width="2000" height="1010" fetchpriority="high">
+      <img class="cine-hero-img" src="assets/tsengel/hero-facade.jpg" srcset="assets/tsengel/hero-facade-800.jpg 800w, assets/tsengel/hero-facade-1400.jpg 1400w, assets/tsengel/hero-facade.jpg 2000w" sizes="100vw" alt="Нэг блокын дөрвөн айл — урд фасадын өнгөт зураг" width="2000" height="964" fetchpriority="high">
       <div class="cine-hero-content container">
         <div class="reveal">
           <a class="back-link" href="index.html#portfolio" data-i18n="common.back">← Хөрөнгө оруулалтууд руу буцах</a>
@@ -96,7 +138,7 @@
             <p data-i18n="loc.p2">Утаа, шуугианаас ангид ногоон бүс, нарлаг энгэрийн микроклимат. Бүх айл урагшаа харсан, уулын энгэрийн нээлттэй харагдацтай.</p>
           </div>
           <figure class="plate reveal">
-            <img src="assets/tsengel/location-sat.jpg" alt="Талбайн сансрын зураг" loading="lazy" width="1200" height="614">
+            <img src="assets/tsengel/location-sat.jpg" srcset="assets/tsengel/location-sat-800.jpg 800w, assets/tsengel/location-sat.jpg 1200w" sizes="(min-width: 768px) 36rem, 100vw" alt="Талбайн сансрын зураг" loading="lazy" width="1200" height="614">
             <figcaption class="plate-cap" data-i18n="loc.cap">Талбайн сансрын зураг</figcaption>
           </figure>
         </div>
@@ -119,7 +161,7 @@
             <p data-i18n="plan.p3">Хотхон засмал замтай. Авто зам зөвхөн гадуур нь тойрох тул төв хэсэг нь бүхэлдээ явган орчин.</p>
           </div>
           <figure class="plate reveal">
-            <img src="assets/tsengel/master-plan.jpg" alt="Ерөнхий төлөвлөгөө — дээрээс, өнгөт зураг" loading="lazy" width="1600" height="979">
+            <img src="assets/tsengel/master-plan.jpg" srcset="assets/tsengel/master-plan-800.jpg 800w, assets/tsengel/master-plan.jpg 1600w" sizes="(min-width: 768px) 36rem, 100vw" alt="Ерөнхий төлөвлөгөө — дээрээс, өнгөт зураг" loading="lazy" width="1600" height="979">
             <figcaption class="plate-cap" data-i18n="plan.cap">Ерөнхий төлөвлөгөө — дээрээс, өнгөт зураг</figcaption>
           </figure>
         </div>
@@ -149,7 +191,7 @@
           <div class="floor reveal">
             <h3 data-i18n="home.f1.title">1-р давхар</h3>
             <figure class="plate plate--diagram">
-              <img src="assets/tsengel/plan-floor1.jpg" alt="1-р давхрын план" loading="lazy" width="1600" height="876">
+              <img src="assets/tsengel/plan-floor1.jpg" srcset="assets/tsengel/plan-floor1-800.jpg 800w, assets/tsengel/plan-floor1.jpg 1600w" sizes="(min-width: 768px) 36rem, 100vw" alt="1-р давхрын план" loading="lazy" width="1600" height="876">
             </figure>
             <ul class="room-list">
               <li data-i18n="home.f1.i1">Гэрт шууд ордог дулаан гараж — 21.1–21.7 м²</li>
@@ -162,7 +204,7 @@
           <div class="floor reveal">
             <h3 data-i18n="home.f2.title">2-р давхар</h3>
             <figure class="plate plate--diagram">
-              <img src="assets/tsengel/plan-floor2.jpg" alt="2-р давхрын план" loading="lazy" width="1600" height="876">
+              <img src="assets/tsengel/plan-floor2.jpg" srcset="assets/tsengel/plan-floor2-800.jpg 800w, assets/tsengel/plan-floor2.jpg 1600w" sizes="(min-width: 768px) 36rem, 100vw" alt="2-р давхрын план" loading="lazy" width="1600" height="876">
             </figure>
             <ul class="room-list">
               <li data-i18n="home.f2.i1">Мастер унтлагын өрөө — 21.1–21.5 м², гардеробтой (6.2–6.7 м²)</li>
@@ -179,6 +221,23 @@
     </section>
 
     <div class="container"><hr class="rule"></div>
+
+    <!-- RENDERS — gallery slot for the commissioned photoreal renders (3_Tsengel/Рендерийн техникийн даалгавар).
+         Drop images into assets/tsengel/renders/, add render.label / render.title to PAGE_I18N (mn + en), then uncomment.
+    <div class="container"><hr class="rule"></div>
+    <section class="section" id="renders">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="label" data-i18n="render.label">Рендер</p>
+          <h2 data-i18n="render.title">Ирээдүйн дүр төрх</h2>
+        </div>
+        <div class="gallery">
+          <figure class="plate reveal"><img src="assets/tsengel/renders/01.jpg" alt="" loading="lazy" decoding="async" width="1600" height="1000"></figure>
+          <figure class="plate reveal"><img src="assets/tsengel/renders/02.jpg" alt="" loading="lazy" decoding="async" width="1600" height="1000"></figure>
+        </div>
+      </div>
+    </section>
+    -->
 
     <!-- 04 — ENGINEERING & COMFORT -->
     <section class="section" id="engineering">
@@ -198,7 +257,7 @@
           </ul>
           <div class="reveal">
             <figure class="plate">
-              <img src="assets/tsengel/elev-front-color.jpg" alt="Урд фасадын өнгөт зураг" loading="lazy" width="1190" height="763">
+              <img src="assets/tsengel/elev-front-color.jpg" srcset="assets/tsengel/elev-front-color-800.jpg 800w, assets/tsengel/elev-front-color.jpg 1190w" sizes="(min-width: 768px) 36rem, 100vw" alt="Урд фасадын өнгөт зураг" loading="lazy" width="1190" height="763">
               <figcaption class="plate-cap" data-i18n="eng.cap">Урд фасадын өнгөт зураг</figcaption>
             </figure>
             <!-- TODO: client photo → assets/tsengel/kamin.jpg, then uncomment -->
@@ -232,11 +291,11 @@
         </ul>
         <div class="amenity-row">
           <figure class="plate reveal">
-            <img src="assets/tsengel/amenity-lower.jpg" alt="Доод хэсгийн тохижилт — асар, тоглоомын талбай" loading="lazy" width="1400" height="642">
+            <img src="assets/tsengel/amenity-lower.jpg" srcset="assets/tsengel/amenity-lower-800.jpg 800w, assets/tsengel/amenity-lower.jpg 1400w" sizes="(min-width: 768px) 36rem, 100vw" alt="Доод хэсгийн тохижилт — асар, тоглоомын талбай" loading="lazy" width="1400" height="642">
             <figcaption class="plate-cap" data-i18n="amen.cap1">Доод хэсгийн тохижилт — асар, тоглоомын талбай</figcaption>
           </figure>
           <figure class="plate reveal">
-            <img src="assets/tsengel/amenity-central.jpg" alt="Төв явган зам, ногоон зурвас" loading="lazy" width="1400" height="752">
+            <img src="assets/tsengel/amenity-central.jpg" srcset="assets/tsengel/amenity-central-800.jpg 800w, assets/tsengel/amenity-central.jpg 1400w" sizes="(min-width: 768px) 36rem, 100vw" alt="Төв явган зам, ногоон зурвас" loading="lazy" width="1400" height="752">
             <figcaption class="plate-cap" data-i18n="amen.cap2">Төв явган зам, ногоон зурвас</figcaption>
           </figure>
         </div>

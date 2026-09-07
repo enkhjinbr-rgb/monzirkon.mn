@@ -13,10 +13,35 @@
   <meta property="og:url" content="https://www.monzirkon.mn/bluesky.html">
   <meta property="og:locale" content="mn_MN">
   <meta property="og:locale:alternate" content="en_US">
-  <!-- og:image: add /og.png (1200x630) before launch -->
+  <meta property="og:image" content="https://www.monzirkon.mn/assets/og/og-bluesky.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="theme-color" content="#fbfbfa">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23131316'/%3E%3Ctext x='32' y='43' font-family='Helvetica,Arial,sans-serif' font-size='30' font-weight='500' fill='%23DEDEDA' text-anchor='middle'%3EM%3C/text%3E%3C/svg%3E">
   <link rel="stylesheet" href="styles.css">
   <script>document.documentElement.classList.add("js");</script>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Нүүр",
+      "item": "https://www.monzirkon.mn/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Blue Sky Cashmere",
+      "item": "https://www.monzirkon.mn/bluesky.html"
+    }
+  ]
+}
+  </script>
 </head>
 <body data-theme="bluesky">
   <a class="skip-link" href="#main" data-i18n="a11y.skip">Агуулга руу очих</a>
@@ -24,7 +49,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="wordmark" href="index.html" aria-label="Montsirkon — нүүр хуудас">MON<span>TSIRKON</span></a>
-      <nav class="site-nav" aria-label="Үндсэн цэс">
+      <nav class="site-nav" id="site-nav" aria-label="Үндсэн цэс">
         <a href="index.html#about" data-i18n="nav.about">Танилцуулга</a>
         <a href="index.html#portfolio" data-i18n="nav.portfolio">Хөрөнгө оруулалтууд</a>
         <a href="index.html#contact" data-i18n="nav.contact">Холбоо барих</a>
@@ -34,6 +59,7 @@
         <span class="lang-sep" aria-hidden="true">/</span>
         <button type="button" data-lang="en" aria-pressed="false">EN</button>
       </div>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Цэс"></button>
     </div>
   </header>
 
@@ -190,97 +216,97 @@
   <script>
     window.PAGE_I18N = {
       "meta.title": {
-        mn: "Blue Sky Cashmere — Монциркон ХХК",
-        en: "Blue Sky Cashmere — Montsirkon LLC"
+        "mn": "Blue Sky Cashmere — Монциркон ХХК",
+        "en": "Blue Sky Cashmere — Montsirkon LLC"
       },
       "meta.desc": {
-        mn: "Ноолуурын урлаг, 2008 оноос. Будалт, ээрмэл, сүлжмэлийн бүрэн нэгдсэн монгол үйлдвэр — олон улсын брэндүүдийн OEM, B2B түнш. Монциркон ХХК-ийн 50 хувийн эзэмшил.",
-        en: "The art of cashmere since 2008. A fully integrated Mongolian mill — dyeing, spinning, knitting — and OEM/B2B partner to international brands. A 50% holding of Montsirkon LLC."
+        "mn": "Ноолуурын урлаг, 2008 оноос. Будалт, ээрмэл, сүлжмэлийн бүрэн нэгдсэн монгол үйлдвэр — олон улсын брэндүүдийн OEM, B2B түнш. Монциркон ХХК-ийн 50 хувийн эзэмшил.",
+        "en": "The art of cashmere since 2008. A fully integrated Mongolian mill — dyeing, spinning, knitting — and OEM/B2B partner to international brands. A 50% holding of Montsirkon LLC."
       },
       "page.label": {
-        mn: "Монциркон — 01 · Үйлдвэрлэл",
-        en: "Montsirkon portfolio — 01 · Manufacturing"
+        "mn": "Монциркон — 01 · Үйлдвэрлэл",
+        "en": "Montsirkon portfolio — 01 · Manufacturing"
       },
       "page.lead": {
-        mn: "Ноолуурын урлаг — зөөлөн мэдрэмж, төгс боловсронгуй байдлын нэгдэл.",
-        en: "The art of cashmere — where softness meets sophistication."
+        "mn": "Ноолуурын урлаг — зөөлөн мэдрэмж, төгс боловсронгуй байдлын нэгдэл.",
+        "en": "The art of cashmere — where softness meets sophistication."
       },
-      "overview.label": { mn: "01 — Танилцуулга", en: "01 — Overview" },
+      "overview.label": { "mn": "01 — Танилцуулга", "en": "01 — Overview" },
       "overview.title": {
-        mn: "2008 оноос — төгс чанарын төлөө",
-        en: "Dedicated to excellence since 2008"
+        "mn": "2008 оноос — төгс чанарын төлөө",
+        "en": "Dedicated to excellence since 2008"
       },
       "overview.p1": {
-        mn: "Blue Sky Cashmere нь будалт, ээрмэл, сүлжмэлийн бүрэн нэгдсэн үйлдвэрлэлтэй. Түүхий эдийн сонголтоос эцсийн оёдол хүртэл бүх үе шат нэг дээвэр дор, нэг стандартаар — ноолуурын гарал үүслийн нутаг Монголд явагддаг.",
-        en: "Blue Sky Cashmere is a fully integrated manufacturer — dyeing, spinning and knitting under one roof, to one standard, in Mongolia, at the source of the fibre itself."
+        "mn": "Blue Sky Cashmere нь будалт, ээрмэл, сүлжмэлийн бүрэн нэгдсэн үйлдвэрлэлтэй. Түүхий эдийн сонголтоос эцсийн оёдол хүртэл бүх үе шат нэг дээвэр дор, нэг стандартаар — ноолуурын гарал үүслийн нутаг Монголд явагддаг.",
+        "en": "Blue Sky Cashmere is a fully integrated manufacturer — dyeing, spinning and knitting under one roof, to one standard, in Mongolia, at the source of the fibre itself."
       },
       "overview.p2": {
-        mn: "Монциркон ХХК уг үйлдвэрийн 50 хувийг эзэмшдэг. Бид урт хугацааны эзэмшигчийн хувьд чанар, тогтвортой байдлыг юуны түрүүнд эрхэмлэдэг.",
-        en: "Montsirkon LLC holds 50% of the factory. As a long-term owner, we place quality and consistency above all else."
+        "mn": "Монциркон ХХК уг үйлдвэрийн 50 хувийг эзэмшдэг. Бид урт хугацааны эзэмшигчийн хувьд чанар, тогтвортой байдлыг юуны түрүүнд эрхэмлэдэг.",
+        "en": "Montsirkon LLC holds 50% of the factory. As a long-term owner, we place quality and consistency above all else."
       },
-      "overview.own.label": { mn: "Эзэмшил", en: "Ownership" },
-      "overview.own.value": { mn: "Монциркон ХХК — 50%", en: "Montsirkon LLC — 50%" },
-      "overview.loc.label": { mn: "Байршил", en: "Location" },
-      "overview.loc.value": { mn: "Улаанбаатар", en: "Ulaanbaatar" },
-      "overview.founded.label": { mn: "Байгуулагдсан", en: "Founded" },
-      "overview.founded.value": { mn: "2008 он", en: "2008" },
-      "overview.web.label": { mn: "Вэбсайт", en: "Website" },
-      "cap.label": { mn: "02 — Хүчин чадал", en: "02 — Capabilities" },
-      "cap.title": { mn: "Бүрэн циклийн үйлдвэрлэл", en: "Full-cycle production" },
-      "cap.stat1.value": { mn: "•• т", en: "•• t" },
-      "cap.stat1.label": { mn: "Жилийн хүчин чадал", en: "Annual capacity" },
-      "cap.stat2.value": { mn: "•••", en: "•••" },
-      "cap.stat2.label": { mn: "Ажилтан", en: "Employees" },
-      "cap.stat3.value": { mn: "30G", en: "30G" },
-      "cap.stat3.label": { mn: "Сүлжмэлийн нарийвчлал хүртэл", en: "Knitting gauge, up to" },
-      "cap.stat4.value": { mn: "6", en: "6" },
-      "cap.stat4.label": { mn: "Экспортын зах зээл", en: "Export markets" },
-      "cap.f1.name": { mn: "Ээрмэл ба будалт", en: "Spinning & dyeing" },
+      "overview.own.label": { "mn": "Эзэмшил", "en": "Ownership" },
+      "overview.own.value": { "mn": "Монциркон ХХК — 50%", "en": "Montsirkon LLC — 50%" },
+      "overview.loc.label": { "mn": "Байршил", "en": "Location" },
+      "overview.loc.value": { "mn": "Улаанбаатар", "en": "Ulaanbaatar" },
+      "overview.founded.label": { "mn": "Байгуулагдсан", "en": "Founded" },
+      "overview.founded.value": { "mn": "2008 он", "en": "2008" },
+      "overview.web.label": { "mn": "Вэбсайт", "en": "Website" },
+      "cap.label": { "mn": "02 — Хүчин чадал", "en": "02 — Capabilities" },
+      "cap.title": { "mn": "Бүрэн циклийн үйлдвэрлэл", "en": "Full-cycle production" },
+      "cap.stat1.value": { "mn": "•• т", "en": "•• t" },
+      "cap.stat1.label": { "mn": "Жилийн хүчин чадал", "en": "Annual capacity" },
+      "cap.stat2.value": { "mn": "•••", "en": "•••" },
+      "cap.stat2.label": { "mn": "Ажилтан", "en": "Employees" },
+      "cap.stat3.value": { "mn": "30G", "en": "30G" },
+      "cap.stat3.label": { "mn": "Сүлжмэлийн нарийвчлал хүртэл", "en": "Knitting gauge, up to" },
+      "cap.stat4.value": { "mn": "6", "en": "6" },
+      "cap.stat4.label": { "mn": "Экспортын зах зээл", "en": "Export markets" },
+      "cap.f1.name": { "mn": "Ээрмэл ба будалт", "en": "Spinning & dyeing" },
       "cap.f1.desc": {
-        mn: "Түүхий ноолуурыг олон улсын стандартын тоног төхөөрөмжөөр ээрч, буддаг — утаснаас нь эхлээд өөрсдөө бүтээдэг.",
-        en: "Fibre is spun and dyed in-house on international-standard equipment — we make our own yarn."
+        "mn": "Түүхий ноолуурыг олон улсын стандартын тоног төхөөрөмжөөр ээрч, буддаг — утаснаас нь эхлээд өөрсдөө бүтээдэг.",
+        "en": "Fibre is spun and dyed in-house on international-standard equipment — we make our own yarn."
       },
-      "cap.f2.name": { mn: "Сүлжмэл", en: "Knitting" },
+      "cap.f2.name": { "mn": "Сүлжмэл", "en": "Knitting" },
       "cap.f2.desc": {
-        mn: "Германы Stoll, Японы Shima Seiki, Италийн Bentley төхөөрөмж дээр 30G хүртэлх нарийвчлалтай сүлжинэ.",
-        en: "Knitted on German Stoll, Japanese Shima Seiki and Italian Bentley machines, in gauges up to 30G."
+        "mn": "Германы Stoll, Японы Shima Seiki, Италийн Bentley төхөөрөмж дээр 30G хүртэлх нарийвчлалтай сүлжинэ.",
+        "en": "Knitted on German Stoll, Japanese Shima Seiki and Italian Bentley machines, in gauges up to 30G."
       },
-      "cap.f3.name": { mn: "Загвар, дээж хөгжүүлэлт", en: "Design & sampling" },
+      "cap.f3.name": { "mn": "Загвар, дээж хөгжүүлэлт", "en": "Design & sampling" },
       "cap.f3.desc": {
-        mn: "Үйлдвэрлэлийн өмнө дээж хөгжүүлж, өнгө тохируулах үйлчилгээ үзүүлнэ.",
-        en: "Sample development and colour-matching ahead of every production run."
+        "mn": "Үйлдвэрлэлийн өмнө дээж хөгжүүлж, өнгө тохируулах үйлчилгээ үзүүлнэ.",
+        "en": "Sample development and colour-matching ahead of every production run."
       },
-      "cap.f4.name": { mn: "Чанар, мөшгих боломж", en: "Quality & traceability" },
+      "cap.f4.name": { "mn": "Чанар, мөшгих боломж", "en": "Quality & traceability" },
       "cap.f4.desc": {
-        mn: "Түүхий эдээс бэлэн бүтээгдэхүүн хүртэл гарал үүслийг мөшгих боломжтой; чанарын аудит, нийцлийн шаардлагыг бүрэн дэмждэг.",
-        en: "Traceability from raw fibre to finished piece; quality audits and compliance requests fully supported."
+        "mn": "Түүхий эдээс бэлэн бүтээгдэхүүн хүртэл гарал үүслийг мөшгих боломжтой; чанарын аудит, нийцлийн шаардлагыг бүрэн дэмждэг.",
+        "en": "Traceability from raw fibre to finished piece; quality audits and compliance requests fully supported."
       },
-      "b2b.label": { mn: "03 — B2B ба OEM", en: "03 — B2B & OEM" },
+      "b2b.label": { "mn": "03 — B2B ба OEM", "en": "03 — B2B & OEM" },
       "b2b.title": {
-        mn: "Олон улсын брэндүүдийн үйлдвэрлэлийн түнш",
-        en: "A manufacturing partner to international brands"
+        "mn": "Олон улсын брэндүүдийн үйлдвэрлэлийн түнш",
+        "en": "A manufacturing partner to international brands"
       },
       "b2b.p1": {
-        mn: "Blue Sky Cashmere нь олон улсын брэндүүдэд OEM, ODM үйлдвэрлэл, хувийн шошгоны үйлчилгээ үзүүлдэг. Хэд хэдэн зэрэглэлийн үйлдвэрлэлийн шугам нь жижиг, дунд цувралаас томоохон захиалга хүртэл зэрэг гүйцэтгэх боломж олгодог. ОХУ, Япон, Их Британи, Итали, Солонгос, Норвегийн брэндүүдтэй хамтран ажилладаг.",
-        en: "Blue Sky Cashmere provides OEM/ODM and private-label manufacturing for international brands. Multiple dedicated production lines run small-to-medium batches and scaled orders in parallel, for clients across Russia, Japan, the UK, Italy, Korea and Norway."
+        "mn": "Blue Sky Cashmere нь олон улсын брэндүүдэд OEM, ODM үйлдвэрлэл, хувийн шошгоны үйлчилгээ үзүүлдэг. Хэд хэдэн зэрэглэлийн үйлдвэрлэлийн шугам нь жижиг, дунд цувралаас томоохон захиалга хүртэл зэрэг гүйцэтгэх боломж олгодог. ОХУ, Япон, Их Британи, Итали, Солонгос, Норвегийн брэндүүдтэй хамтран ажилладаг.",
+        "en": "Blue Sky Cashmere provides OEM/ODM and private-label manufacturing for international brands. Multiple dedicated production lines run small-to-medium batches and scaled orders in parallel, for clients across Russia, Japan, the UK, Italy, Korea and Norway."
       },
       "b2b.p2": {
-        mn: "Захиалгын доод хэмжээ, хугацааг утасны бүтэц, өнгөний шаардлага, цувралын хэмжээнд тохируулан уян хатан тогтооно. Баталгаажсан түүхий эд, тогтвортой сав баглаа боодлын шийдлийг мөн санал болгодог.",
-        en: "Minimums and lead times stay flexible to yarn construction, colour requirements and order scale. Certified fibres and sustainable packaging are available on request."
+        "mn": "Захиалгын доод хэмжээ, хугацааг утасны бүтэц, өнгөний шаардлага, цувралын хэмжээнд тохируулан уян хатан тогтооно. Баталгаажсан түүхий эд, тогтвортой сав баглаа боодлын шийдлийг мөн санал болгодог.",
+        "en": "Minimums and lead times stay flexible to yarn construction, colour requirements and order scale. Certified fibres and sustainable packaging are available on request."
       },
       "b2b.cert": {
-        mn: "Гэрчилгээ, стандарт: ••",
-        en: "Certifications & standards: ••"
+        "mn": "Гэрчилгээ, стандарт: ••",
+        "en": "Certifications & standards: ••"
       },
       "cta.title": {
-        mn: "Үйлдвэрийн танилцуулга, хамтын ажиллагаа",
-        en: "Factory profile & partnership"
+        "mn": "Үйлдвэрийн танилцуулга, хамтын ажиллагаа",
+        "en": "Factory profile & partnership"
       },
       "cta.p": {
-        mn: "Танилцуулга хүссэн болон хамтын ажиллагааны хүсэлтээ бидэнд илгээнэ үү. Бид ажлын 3 хоногийн дотор хариу өгнө.",
-        en: "For a factory profile or partnership enquiries, write to us — we reply within three working days."
+        "mn": "Танилцуулга хүссэн болон хамтын ажиллагааны хүсэлтээ бидэнд илгээнэ үү. Бид ажлын 3 хоногийн дотор хариу өгнө.",
+        "en": "For a factory profile or partnership enquiries, write to us — we reply within three working days."
       },
-      "cta.btn": { mn: "Танилцуулга авах", en: "Request factory profile" }
+      "cta.btn": { "mn": "Танилцуулга авах", "en": "Request factory profile" }
     };
   </script>
   <script src="app.js" defer></script>

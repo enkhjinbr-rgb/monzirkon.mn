@@ -634,6 +634,7 @@ body:not([data-theme]) .site-header .lang-toggle button.is-active {
 /* ---- buttons ---------------------------------------------------- */
 
 .btn {
+  text-decoration: none; /* also when a .btn sits inside a <p>, which underlines links */
   display: inline-block;
   padding: 0.9375rem 2.5rem;
   border: 1px solid var(--accent-strong);
@@ -1222,7 +1223,7 @@ body[data-theme="residence"] .fact-list li {
 
 body[data-theme="residence"] .fact-list li::before {
   counter-increment: fact;
-  content: counter(fact, decimal-leading-zero);
+  content: counter(fact);
   font-size: 0.6875rem;
   font-weight: 500;
   letter-spacing: 0.15em;
@@ -1446,17 +1447,6 @@ body[data-theme="residence"] .steps li {
   padding-top: 1.25rem;
 }
 
-body[data-theme="residence"] .steps li::before {
-  counter-increment: step;
-  content: counter(step, decimal-leading-zero);
-  display: block;
-  margin-bottom: 0.75rem;
-  font-size: 0.6875rem;
-  font-weight: 500;
-  letter-spacing: 0.3em;
-  color: var(--accent-strong);
-}
-
 body[data-theme="residence"] .steps h3 {
   font-size: 0.875rem;
   letter-spacing: 0.18em;
@@ -1469,35 +1459,7 @@ body[data-theme="residence"] .steps p {
   overflow-wrap: anywhere;
 }
 
-body[data-theme="residence"] .faq { border-top: 1px solid var(--border); }
-body[data-theme="residence"] .faq details { border-bottom: 1px solid var(--border); }
-
-body[data-theme="residence"] .faq summary {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1.125rem 0;
-  cursor: pointer;
-  list-style: none;
-  font-weight: 500;
-}
-
-body[data-theme="residence"] .faq summary::-webkit-details-marker { display: none; }
-
-body[data-theme="residence"] .faq summary::after {
-  content: "+";
-  flex: 0 0 auto;
-  color: var(--accent-strong);
-}
-
-body[data-theme="residence"] .faq details[open] summary::after { content: "−"; }
-
-body[data-theme="residence"] .faq details p {
-  max-width: 44rem;
-  padding: 0 0 1.25rem;
-  font-size: 0.9375rem;
-  color: var(--muted);
-}
+/* mobile action bar (residence): slides in after the hero, hides at the CTA band */
 
 .cta-bar { display: none; }
 
@@ -1552,7 +1514,6 @@ body[data-theme="residence"] .faq details p {
   body[data-theme="residence"] .reveal { opacity: 1 !important; transform: none !important; }
   body[data-theme="residence"] .plate,
   body[data-theme="residence"] .fact-list li,
-  body[data-theme="residence"] .steps li,
-  body[data-theme="residence"] .faq details { break-inside: avoid; }
+  body[data-theme="residence"] .steps li { break-inside: avoid; }
   body[data-theme="residence"] .plate { box-shadow: none; }
 }

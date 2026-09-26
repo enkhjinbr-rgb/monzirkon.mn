@@ -5,20 +5,20 @@
    ============================================================ */
 
 :root {
-  /* core — investment black */
-  --bg: #131316;
-  --surface: #17171b;
-  --text: #dededa;
-  --muted: #9a9a96;
-  --hairline: #8e8e8a;
-  --border: #3c3c42;
-  --accent: #dededa;
-  --accent-strong: #dededa;
+  /* core — Zircon Blue (#00849D), the house colour, on its own shade ramp */
+  --bg: #001a1f;
+  --surface: #00282f;
+  --text: #e6f3f5;
+  --muted: #9fb9be;
+  --hairline: #5a8189;
+  --border: #00424f;
+  --accent: #00849d;
+  --accent-strong: #4bb8cf;
 
   /* header (consistent chrome across themes, recolored for legibility) */
-  --header-bg: #131316;
-  --header-text: #dededa;
-  --header-border: #3c3c42;
+  --header-bg: #001a1f;
+  --header-text: #e6f3f5;
+  --header-border: #00424f;
 
   /* per-project card accents (landing grid) */
   --c-bluesky: #94cee3;
@@ -74,6 +74,9 @@ body[data-theme="targad"] {
   --accent: #5fb8b0;
   --accent-strong: #5fb8b0;
   --accent-2: #d9c7a7;
+  --header-bg: #001a1f;
+  --header-text: #e6f3f5;
+  --header-border: #00424f;
 }
 
 body[data-theme="residence"] {
@@ -90,9 +93,9 @@ body[data-theme="residence"] {
   --border: #e5ddcd;
   --accent: #b08d57;
   --accent-strong: #8a6a3b;
-  --header-bg: #131316;
-  --header-text: #dededa;
-  --header-border: #3c3c42;
+  --header-bg: #001a1f;
+  --header-text: #e6f3f5;
+  --header-border: #00424f;
 }
 
 /* ---- reset / base --------------------------------------------- */
@@ -1032,7 +1035,7 @@ body[data-theme="residence"] .cine-hero::after {
     rgba(10, 12, 10, 0.82) 0%,
     rgba(10, 12, 10, 0.46) 30%,
     rgba(10, 12, 10, 0.4) 55%,
-    rgba(19, 19, 22, 0.97) 100%
+    rgba(0, 26, 31, 0.97) 100%
   );
 }
 
@@ -1484,7 +1487,7 @@ body[data-theme="residence"] .steps p {
   .cta-bar .btn {
     width: 100%;
     text-align: center;
-    color: #dededa;
+    color: #e6f3f5;
     border-color: #b08d57;
   }
 

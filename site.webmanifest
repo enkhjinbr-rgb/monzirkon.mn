@@ -3,8 +3,8 @@
   "short_name": "Montsirkon",
   "start_url": "/",
   "display": "browser",
-  "background_color": "#131316",
-  "theme_color": "#131316",
+  "background_color": "#001a1f",
+  "theme_color": "#001a1f",
   "lang": "mn",
   "icons": [
     {
